@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# Starlink Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Приложение для отслеживания спутников Starlink в реальном времени с использованием технологии WebGL и библиотеки React Three Fiber.
 
-## Available Scripts
+## Описание
 
-In the project directory, you can run:
+Это веб-приложение отображает 3D модель Земли, Солнца и Луны, а также спутников Starlink, используя данные TLE (Two-Line Element). Вы можете настроить ускорение времени для наблюдения за движением объектов в реальном времени. 
 
-### `npm start`
+### Особенности:
+- Визуализация Земли, Солнца и Луны с астрономическими расчетами.
+- Отображение спутников Starlink на основе актуальных данных TLE.
+- Возможность ускорять или замедлять время с помощью ползунка.
+- Использование библиотеки `react-three-fiber` для рендеринга 3D-графики в реальном времени.
+- Управление камерой с помощью `OrbitControls`.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Установка
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Клонируйте репозиторий:
 
-### `npm test`
+   ```bash
+   git clone https://github.com/1ssk/starlink-tracker.git
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Перейдите в каталог проекта:
 
-### `npm run build`
+   ```bash
+   cd starlink-tracker
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Установите зависимости:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   npm install
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Запустите проект:
 
-### `npm run eject`
+   ```bash
+   npm start
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   После этого откроется веб-страница с 3D-отрисовкой спутников, Земли и Луны.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Используемые технологии
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **React**: Для создания интерфейса.
+- **React Three Fiber**: Для рендеринга 3D-графики в WebGL.
+- **Three.js**: Библиотека для 3D-графики.
+- **satellite.js**: Библиотека для работы с данными TLE и астрономическими расчетами.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Функциональность
 
-## Learn More
+### 1. Модели:
+- **Земля**: Вращается вокруг своей оси с учетом ускоренного времени.
+- **Солнце**: Расположено в зависимости от текущей астрономической позиции.
+- **Луна**: Также отображается в зависимости от её позиции на орбите.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 2. Спутники:
+- Загружаются данные TLE для спутников Starlink с сайта [Celestrak](https://celestrak.org/).
+- Спутники отображаются как маленькие красные сферы, движущиеся по орбитам в реальном времени.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 3. Ускорение времени:
+- Вы можете изменять скорость времени с помощью ползунка в интерфейсе, от реального времени до 1000x ускорения.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
